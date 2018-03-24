@@ -1,9 +1,31 @@
 <!doctype html>
-<html ng-app>
+<html>
 <head>
-    <title>My AngularJS App</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="assets/vendor/angular.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!--<script>-->
+        <!--var app = angular.module("app", []);-->
+        <!--app.controller("HelloController", function($scope) {-->
+            <!--$scope.message = "Hello, AngularJS";-->
+        <!--});-->
+    <!--</script>-->
 </head>
 <body>
+<div>
+    <label>Name:</label>
+
+
+    <div ng-app="app">
+    <div ng-controller="HelloController">
+        <h2>{{message}}</h2>
+        <br>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+
+    </div>
+    </div>
+</div>
 </body>
 </html>
