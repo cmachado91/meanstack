@@ -10,6 +10,12 @@
             <!--$scope.message = "Hello, AngularJS";-->
         <!--});-->
     <!--</script>-->
+    <style>
+        input {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 <div>
@@ -19,10 +25,20 @@
     <div ng-app="app">
     <div ng-controller="HelloController">
         <h2>{{message}}</h2>
+        <input type="text" ng-model="firstName" placeholder="Enter a first name here">
+        <input type="text" ng-model="lastName" placeholder="Enter a last name here">
         <br>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
-        <h1>Hello {{yourName}}!</h1>
+        <input type="text" ng-model="petType" placeholder="Enter pet type">
+        <input type="text" ng-model="petName" placeholder="Pets name">
+        <br>
+        <input type="text" ng-model="occupation" placeholder="Enter your job title">
+        <input type="text" ng-model="car" placeholder="Enter type of car">
+        <br>
+        <input type="text" ng-model="favoriteSong" placeholder="Enter your favorite song">
+        <br>
+        <button id="submit" onclick="submitAnswers()">Submit</button>
+
+        <p type="text" ng-show>hello my name is {{firstName}} {{lastName}}</p>
 
     </div>
     </div>
